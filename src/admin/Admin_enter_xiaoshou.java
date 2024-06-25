@@ -96,7 +96,7 @@ static String phoneNumber;
         });
         
         // 从数据库获取用户信息
-        model = new DefaultTableModel(new Object[][]{}, new Object[]{"顾客账号", "顾客密码", "电话号码"});
+        model = new DefaultTableModel(new Object[][]{}, new Object[]{"销售账号", "销售密码", "密钥"});
          table = new JTable(model);
         JScrollPane scrollPane = new JScrollPane(table);
         scrollPane.setBounds(0, 15, 500, 400);
@@ -320,11 +320,11 @@ static String phoneNumber;
                      String newAccount = username.getText();
                      String newPassword = mima.getText();
                      String ppp = newPassword;
-                     String newmiyao = q.getText();
+                     String newmiyao = "111";
 
                      // 执行数据库更新
                      try {
-                    	 Xiugaiuser.xiugai(newAccount,newPassword,ppp,newmiyao);
+                    	 Xiugaixiaoshou.xiugai(newAccount,newPassword,ppp,newmiyao);
                          // 你的更新数据库代码
                      } catch (SQLException ex) {
                          ex.printStackTrace();

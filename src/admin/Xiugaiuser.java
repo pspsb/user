@@ -20,7 +20,7 @@ public class Xiugaiuser {
     
     public static void xiugai(String name, String mima,String mima2,String tel) throws SQLException {
         // SQL statement for updating password
-        String sql = "UPDATE guke SET mima = ? ,tel=?WHERE zhanghao = ?";
+        String sql = "UPDATE guke SET mima = ? ,tel=? WHERE zhanghao = ?";
         
         try {
             // Open a connection
@@ -29,7 +29,8 @@ public class Xiugaiuser {
             // Execute the query
             try (PreparedStatement pstmt = con.prepareStatement(sql)) {
                 pstmt.setString(1, mima);
-                pstmt.setString(2, tel); // 'tel' should be passed from the event handler
+                 // 'tel' should be passed from the event handler
+                pstmt.setString(2, tel);
                 pstmt.setString(3, name);
                 int rowsAffected = pstmt.executeUpdate();
                 
