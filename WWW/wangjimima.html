@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>忘记密码</title>
+        <style>
+            body {
+                background: url('R-C.jpg') no-repeat center center fixed; /* 确保路径正确 */
+                background-size: cover;
+                font-family: Arial, sans-serif; /* 设置字体 */
+                color: #333; /* 设置字体颜色 */
+            }
+           .forget-container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* 更好的居中方式 */
+                width: 300px;
+                padding: 20px;
+                background: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            }
+            input[type="text"],
+            input[type="password"],
+            input[type="tel"] {
+                width: calc(100% - 20px); /* 宽度减去内边距 */
+                height: 40px;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc; /* 边框样式 */
+                border-radius: 4px; /* 圆角边框 */
+                font-size: 14px;
+            }
+            p {
+                font-size: 24px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            button[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            button[type="submit"]:hover {
+                background-color: #0056b3; /* 鼠标悬停效果 */
+            }
+        </style>
+    </head>
+    <body>
+        <form action="wangjimima.php" method="POST">
+            <div class="forget-container">
+                <p>忘记密码</p>
+                <input type="text" name="user" placeholder="用户名" required="required"><br>
+                <input type="password" name="password1" placeholder="请填写新密码" required="required"><br>
+                <input type="password" name="password2" placeholder="请确认密码" required="required"><br>
+                <input type="tel" name="tel" placeholder="电话号码" required="required"><br>
+                <button type="submit" name="queren">确认</button>
+            </div>
+        </form>
+    </body>
+</html>

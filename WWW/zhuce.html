@@ -1,0 +1,80 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>请注册</title>
+        <style>
+            body {
+                background: url(zhuc.jpg) no-repeat center center fixed;
+                background-size: cover;
+                font-family: 'Arial', sans-serif;
+                color: #333;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            form {
+                background: rgba(255, 255, 255, 0.8);
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 300px;
+                text-align: center;
+            }
+           .loader {
+                width: fit-content;
+                font-weight: bold;
+                font-size: 24px;
+                padding-bottom: 8px;
+                background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+                animation: l2 2s linear infinite;
+                margin: 0 auto 20px;
+            }
+           .loader:before {
+                content: "Loading...";
+            }
+            @keyframes l2 {
+                to {
+                    background-size: 100% 3px;
+                }
+            }
+            input[type="text"],
+            input[type="password"],
+            input[type="tel"] {  /* 新增电话输入框的样式 */
+                width: calc(100% - 22px);
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="zhuc" action="zhuce.php" method="POST">
+            <div class="loader"></div>
+            <input type="text" name="user" id="user" placeholder="用户名" required><br>
+            <input type="password" name="password1" placeholder="密码" required><br>
+            <input type="password" name="password2" placeholder="请确认密码" required><br>
+            <input type="tel" name="tel" placeholder="电话号码" required> 
+            <button type="submit">提交</button>
+        </form>
+    </body>
+    </html>

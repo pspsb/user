@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<html lang="zh-CN"> 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>登录界面</title>
+    <style>
+        body {
+            background: url(aa.jpg) no-repeat center 0px fixed;
+            background-size: cover;
+            font-family: "微软雅黑", sans-serif;
+        }
+        form{
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -150px 0 0 -150px;/*外边距《上，左，下，右》*/
+            width: 400px;
+            height: 400px;
+        }
+        #user {
+            background: url(https://ts1.cn.mm.bing.net/th/id/R-C.b25f656b549e62845dfd07ac95610495?rik=Sw5LrvUFhylMqw&riu=http%3a%2f%2fimg.yipic.cn%2fthumb%2fdd3e9473%2f69d85a12%2f4e50dbad%2f41ef34c6%2fbig_dd3e947369d85a124e50dbad41ef34c6.png%3fx-oss-process%3dimage%2fformat%2cwebp%2fsharpen%2c100&ehk=4eBalLciGgIeW1gxE5TRVCjRVva%2bpnPwT%2fo73RkBYIo%3d&risl=&pid=ImgRaw&r=0) no-repeat center 0px fixed;
+            padding: 10px;
+            width: 88%;
+            color: black;
+            margin-bottom: 10px;
+            background-color: #555555;
+            border: 1px solid black;/*边框宽度*/
+            border-radius: 5px;
+            letter-spacing: 2px;
+            font-size: 100%;
+         }
+         #password {
+            background: url(https://ts1.cn.mm.bing.net/th/id/R-C.b25f656b549e62845dfd07ac95610495?rik=Sw5LrvUFhylMqw&riu=http%3a%2f%2fimg.yipic.cn%2fthumb%2fdd3e9473%2f69d85a12%2f4e50dbad%2f41ef34c6%2fbig_dd3e947369d85a124e50dbad41ef34c6.png%3fx-oss-process%3dimage%2fformat%2cwebp%2fsharpen%2c100&ehk=4eBalLciGgIeW1gxE5TRVCjRVva%2bpnPwT%2fo73RkBYIo%3d&risl=&pid=ImgRaw&r=0) no-repeat center 0px fixed;
+            padding: 10px;/*内边距*/
+            width: 88%;
+            color: black;
+            margin-bottom: 10px;/*下边距*/
+            background-color: #555555;
+            border: 1px solid black;
+            border-radius: 5px;
+            letter-spacing: 2px;
+            font-size: 100%;
+         }
+         button{
+            background: url(https://bpic.588ku.com/element_origin_min_pic/20/03/12/945c8b2d1034bcb65fa148b8f7a6fa52.jpg) no-repeat center 0px fixed;
+            padding: 10px;
+            width: 46%;
+            color: blueviolet;
+            font-size: 100%;
+         }
+         #zhuce{
+            background: url(https://bpic.588ku.com/element_origin_min_pic/20/03/12/945c8b2d1034bcb65fa148b8f7a6fa52.jpg) no-repeat center 0px fixed;
+            padding: 10px;
+            width: 46%;
+            color: blueviolet;
+            font-size: 100%;
+         }
+         /* HTML: <div class="loader"></div> */
+         .loader {
+                width: fit-content;
+                font-weight: bold;
+                font-family: sans-serif;
+                font-size: 30px;
+                padding-bottom: 8px;
+                background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+                animation: l2 2s linear infinite;
+                }
+                .loader:before {
+                content:"请登录..."
+}
+@keyframes l2 {to{background-size: 100% 3px}}
+        a{
+            color: rgb(185, 13, 13);
+        }
+       
+    </style>
+    <script type="text/javascript">
+        
+        function zc() {
+            window.location.href = "zhuce.html";
+        }
+    </script>
+    
+    </head>
+<body> 
+      <form name="qdenglu" action="denglushi.php" method="POST"> 
+    <!-- 登录表单，用于向服务器提交用户登录凭据-->
+     <p>戴炜航网工23101班</p>
+    <div class="loader"></div><br>
+        <input type="text" name="user" id="user" placeholder="用户名" required="required"><br>
+        <input type="password" name="password" id="password" placeholder="密  码" required="required"><br>
+        <button type="submit">登录</button>
+        <a href="denluhou.html"></a>
+        <input type="button" id="zhuce" value="注   册" onclick="zc()"><br>
+        <a href="zhuce.html"></a>
+        <a href="wangjimima.html">忘记密码</a>
+        
+      </form>
+</body>
+</html>
